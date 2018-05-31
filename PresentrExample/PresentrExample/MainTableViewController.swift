@@ -445,7 +445,7 @@ extension MainTableViewController {
         navigationController?.pushViewController(splitVC, animated: true)
     }
 
-    func topCenterWithMarginPresentation() {
+    @objc func topCenterWithMarginPresentation() {
         presenter.presentationType = .custom(width: .default, height: .custom(size: 150), center: .topCenterWithMargin(margin: 15.0))
         presenter.transitionType = .coverHorizontalFromLeft
         presenter.dismissTransitionType = .coverHorizontalFromRight
@@ -453,7 +453,7 @@ extension MainTableViewController {
         customPresentViewController(presenter, viewController: alertController, animated: true, completion: nil)
     }
 
-    func bottomCenterWithMarginPresentation() {
+    @objc func bottomCenterWithMarginPresentation() {
         presenter.presentationType = .custom(width: .default, height: .custom(size: 150), center: .bottomCenterWithMargin(margin: 15))
         presenter.transitionType = .coverHorizontalFromLeft
         presenter.dismissTransitionType = .coverHorizontalFromRight
