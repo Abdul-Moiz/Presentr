@@ -25,7 +25,7 @@ public enum TransitionType {
     case coverHorizontalFromRight
     case coverHorizontalFromLeft
     case flipHorizontal
-	case coverFromCorner(Corner)
+    case coverFromCorner(Corner)
     case custom(PresentrAnimation)
 
     /// Associates a custom transition type to the class responsible for its animation.
@@ -43,8 +43,8 @@ public enum TransitionType {
             return CoverHorizontalAnimation(fromRight: true)
         case .coverHorizontalFromLeft:
             return CoverHorizontalAnimation(fromRight: false)
-		case .coverFromCorner(let corner):
-			return CoverFromCornerAnimation(corner: corner)
+        case .coverFromCorner(let corner):
+          return CoverFromCornerAnimation(corner: corner)
         case .flipHorizontal:
             return FlipHorizontalAnimation()
         case .custom(let animation):
